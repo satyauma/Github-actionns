@@ -1,0 +1,24 @@
+# workflows
+# Should Have Name
+name: Hello
+
+# on tells when the work flow run
+on:
+  workflow_dispatch: 
+
+# jobs
+# Should be inside the workflows
+# job tells what the workflow should do,there can be one or more than one jobs, hence we write jobs
+jobs:
+  say-hello:
+    # create an container with ubuntu running
+    runs-on: ubuntu-latest
+    steps:
+      - name: say hello world
+        run: echo "Hello World"
+
+# steps
+# Should be inside the Job
+
+# Actions
+# Should be inside the Steps
