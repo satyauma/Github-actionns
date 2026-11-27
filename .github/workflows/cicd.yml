@@ -10,18 +10,21 @@ jobs:
       - name: Clone the code
         run: echo "cloning the code"
   build:
+    needs: [code]
     runs-on: ubuntu-latest
     steps:
       - name: Buliding usind docker
         run: echo "Building using docker"
 
   test:
+    needs: [build]
     runs-on: ubuntu-latest
     steps:
       - name: run test cases
         run: echo "Runing test cases"
 
   deploy:
+    needs: [build,test]
     runs-on: ubuntu-latest
     steps:
       - name: deploy code
