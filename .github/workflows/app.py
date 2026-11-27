@@ -1,4 +1,4 @@
-# armstrong numbber code
+
 n = 153
 t = n
 p = len(str(n))
